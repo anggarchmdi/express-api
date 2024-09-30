@@ -57,6 +57,7 @@ app.delete('/users/:id', async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
+    
 });
 
 // Sync database and start server
@@ -65,3 +66,4 @@ sequelize.sync().then(() => {
         console.log('API is running on https://localhost:3000');
     });
 });
+
